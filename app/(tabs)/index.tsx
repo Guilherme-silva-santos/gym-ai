@@ -1,17 +1,13 @@
+import { ScreenTemplate } from '@/presentation/atomic/templates/ScreenTemplate';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { ThemedText } from '@/components/ThemedText';
+import { StyleSheet, Text } from 'react-native';
 
 export default function Home() {
   return (
-    <View style={styles.container}>
-      <ThemedText>This is the home screen.</ThemedText>
-    </View>
+    <ScreenTemplate>
+      <Text>Home</Text>
+    </ScreenTemplate>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
+const styles = StyleSheet.create({});

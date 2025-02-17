@@ -5,11 +5,11 @@ import {
   ActivityIndicator,
   StyleProp,
   StyleSheet,
+  Text,
   TouchableOpacity,
   TouchableOpacityProps,
   ViewStyle,
 } from 'react-native';
-import { CustomText } from '../CustomText';
 
 type IconNames = keyof typeof MaterialIcons.glyphMap;
 
@@ -73,12 +73,7 @@ export const Button: FC<ButtonProps> = ({
           {leftIcon && (
             <MaterialIcons size={24} color={buttonTextColor} name={leftIcon} />
           )}
-          <CustomText
-            fontType="PoppinsBold"
-            style={[styles.text, { color: buttonTextColor }]}
-          >
-            {text}
-          </CustomText>
+          <Text style={[styles.text, { color: buttonTextColor }]}>{text}</Text>
           {rightIcon && (
             <MaterialIcons size={24} color={buttonTextColor} name={rightIcon} />
           )}
@@ -92,7 +87,7 @@ export const Button: FC<ButtonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
+    width: '90%',
     paddingVertical: 12,
     paddingHorizontal: 8,
     alignItems: 'center',
