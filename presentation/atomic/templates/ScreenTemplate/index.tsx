@@ -1,13 +1,23 @@
 import { colors, paddings, radius } from '@/theme';
 import React, { FC } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { Header } from '../../atoms/Header';
 
 type ScreenTemplateProps = {
   children: React.ReactNode;
+  title: string;
+  canGoBack: boolean;
+  onGoBack?: () => void;
 };
-export const ScreenTemplate: FC<ScreenTemplateProps> = ({ children }) => {
+export const ScreenTemplate: FC<ScreenTemplateProps> = ({
+  children,
+  title,
+  canGoBack,
+  onGoBack,
+}) => {
   return (
     <View style={styles.container}>
+      <Header title={title} canGoBack={canGoBack} onGoBack={onGoBack} />
       <View style={styles.children}>{children}</View>
     </View>
   );
@@ -16,7 +26,7 @@ export const ScreenTemplate: FC<ScreenTemplateProps> = ({ children }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00030c',
+    backgroundColor: colors.black,
   },
   children: {
     backgroundColor: colors.white,

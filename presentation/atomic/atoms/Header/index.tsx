@@ -6,14 +6,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 type HeaderProps = {
   title: string;
   canGoBack?: boolean;
+  onGoBack?: () => void;
 };
 
-export const Header: FC<HeaderProps> = ({ title, canGoBack }) => {
+export const Header: FC<HeaderProps> = ({ title, canGoBack, onGoBack }) => {
   return (
     <View style={styles.container}>
       {canGoBack ? (
-        <TouchableOpacity style={styles.iconContainer}>
-          <MaterialIcons name="chevron-left" size={24} color="black" />
+        <TouchableOpacity style={styles.iconContainer} onPress={onGoBack}>
+          <MaterialIcons name="chevron-left" size={24} color="white" />
         </TouchableOpacity>
       ) : (
         <View style={styles.placeholder} />
@@ -26,8 +27,8 @@ export const Header: FC<HeaderProps> = ({ title, canGoBack }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.gray[200],
-    padding: paddings.sm,
+    paddingHorizontal: paddings.sm,
+    paddingVertical: paddings.lg,
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: fontSizes.xxlarge,
     flex: 1,
+    color: colors.white,
   },
   iconContainer: {
     width: 40,
