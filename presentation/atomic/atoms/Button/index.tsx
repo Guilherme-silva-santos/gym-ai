@@ -56,7 +56,7 @@ export const Button: FC<ButtonProps> = ({
   return (
     <TouchableOpacity
       {...rest}
-      activeOpacity={0.7}
+      activeOpacity={0.8}
       disabled={isLoading}
       style={[
         styles.container,
