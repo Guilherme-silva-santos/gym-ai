@@ -13,7 +13,11 @@ export const Header: FC<HeaderProps> = ({ title, canGoBack, onGoBack }) => {
   return (
     <View style={styles.container}>
       {canGoBack ? (
-        <TouchableOpacity style={styles.iconContainer} onPress={onGoBack}>
+        <TouchableOpacity
+          style={styles.iconContainer}
+          activeOpacity={0.8}
+          onPress={onGoBack}
+        >
           <MaterialIcons name="chevron-left" size={24} color="white" />
         </TouchableOpacity>
       ) : (
@@ -36,6 +40,7 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     fontSize: fontSizes.xxlarge,
+    fontWeight: 'bold',
     flex: 1,
     color: colors.white,
   },

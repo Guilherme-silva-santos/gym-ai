@@ -6,7 +6,7 @@ import { Header } from '../../atoms/Header';
 type ScreenTemplateProps = {
   children: React.ReactNode;
   title: string;
-  canGoBack: boolean;
+  canGoBack?: boolean;
   onGoBack?: () => void;
 };
 export const ScreenTemplate: FC<ScreenTemplateProps> = ({
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderTopRightRadius: radius.xxl,
     borderTopLeftRadius: radius.xxl,
-    paddingHorizontal: paddings.sm,
+    paddingHorizontal: paddings.xl,
     paddingVertical: paddings.sm,
   },
 });
