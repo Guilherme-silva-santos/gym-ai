@@ -1,14 +1,7 @@
-import { ScreenTemplate } from '@/presentation/atomic/templates/ScreenTemplate';
+import { HomeTemplate } from '@/presentation/atomic/templates/homeTemplate';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
 const Home = () => {
-  return (
-    <ScreenTemplate title="Home" canGoBack={true}>
-      <Text>Home</Text>
-    </ScreenTemplate>
-  );
+  return <HomeTemplate />;
 };
-
-const styles = StyleSheet.create({});
 
 export default Home;

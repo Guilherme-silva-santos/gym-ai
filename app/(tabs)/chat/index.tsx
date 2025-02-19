@@ -1,9 +1,9 @@
-import { ScreenTemplate } from '@/presentation/atomic/templates/ScreenTemplate';
+import { ScreenTemplate } from '@/presentation/atomic/templates/screenTemplate';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 const Chat = () => {
   return (
-    <ScreenTemplate title="Home" canGoBack={true}>
+    <ScreenTemplate title="Home">
       <Text>chat</Text>
     </ScreenTemplate>
   );

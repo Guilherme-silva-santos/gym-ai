@@ -1,9 +1,9 @@
-import { ScreenTemplate } from '@/presentation/atomic/templates/ScreenTemplate';
+import { ScreenTemplate } from '@/presentation/atomic/templates/screenTemplate';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
 const Workouts = () => {
   return (
-    <ScreenTemplate title="Workouts" canGoBack={true}>
+    <ScreenTemplate title="Workouts">
       <Text>Workouts</Text>
     </ScreenTemplate>
   );

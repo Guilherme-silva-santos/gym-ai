@@ -9,8 +9,8 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: colors.primary,
-        tabBarInactiveTintColor: colors.black,
+        tabBarActiveTintColor: colors.yellow,
+        tabBarInactiveTintColor: colors.gray[300],
         tabBarStyle: {},
       }}
     >
@@ -35,7 +35,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="workouts/index"
         options={{
-          tabBarLabel: 'Workouts',
+          tabBarLabel: 'Treinos',
           tabBarIcon: ({ color }) => (
             <MaterialIcons color={color} size={20} name="fitness-center" />
           ),
