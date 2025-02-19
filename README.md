@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# 📱 Gym-AI  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+🚀 **Gym-AI** is a **React Native** application that uses artificial intelligence to generate **personalized workouts and diet plans** for gym users. It provides recommendations based on the user's profile and allows interaction with a fitness chatbot.  
 
-## Get started
+---
 
-1. Install dependencies
+## 📌 Features  
+✔️ **Personalized workout plans** based on user goals and fitness level  
+✔️ **Diet recommendations** based on user preferences  
+✔️ **AI-powered chatbot** for fitness guidance  
+✔️ **Track workout history and progress**  
+✔️ **Modern UI/UX with smooth animations**  
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🛠️ Technologies Used  
+- **React Native (Expo)** - Cross-platform mobile development  
+- **TypeScript** - Type safety and better development experience  
+- **OpenAI API** - AI-generated workout and diet plans  
+- **Spoonacular API** - Fetching meal plans and recipes  
+- **Firebase Firestore** - Storing user data and history  
+- **React Navigation** - Managing app navigation  
 
-   ```bash
-    npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🚀 Installation & Setup  
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 1️⃣ Clone the repository  
+```sh
+git clone https://github.com/guilherme-silva-santos/gym-ai.git
+cd gym-ai
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+2️⃣ Install dependencies
+sh
+Copiar
+Editar
+npm install
+or
 
-## Get a fresh project
+sh
+Copiar
+Editar
+yarn install
+3️⃣ Set up environment variables
+Create a .env file in the root directory and add your API keys:
 
-When you're ready, run:
+env
+Copiar
+Editar
+OPENAI_API_KEY=your_openai_api_key
+SPOONACULAR_API_KEY=your_spoonacular_api_key
+4️⃣ Run the project
+For development:
 
-```bash
-npm run reset-project
-```
+sh
+Copiar
+Editar
+npx expo start
+For Android:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+sh
+Copiar
+Editar
+npx expo run:android
+For iOS (Mac only):
 
-## Learn more
+sh
+Copiar
+Editar
+npx expo run:ios
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
