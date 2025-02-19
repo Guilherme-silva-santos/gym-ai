@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+📱 Gym-AI
+🚀 Gym-AI is a React Native application that uses artificial intelligence to generate personalized workouts and diet plans for the gym. It provides recommendations based on the user's profile and allows interaction with a fitness chatbot.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📌 Features
+✅ Generate customized workout plans based on the user's level and goals
+✅ Suggest diet plans tailored to dietary preferences
+✅ AI-powered chatbot for fitness tips and guidance
+✅ Track workout history and progress over time
+✅ Modern UI/UX design with smooth animations
 
-## Get started
+🛠️ Technologies Used
+React Native (Expo) - Cross-platform mobile development
+TypeScript - Type safety and better development experience
+OpenAI API - AI-generated workout and diet recommendations
+Spoonacular API - Fetching meal plans and recipes
+Firebase Firestore - Storing user data and history
+React Navigation - Managing app navigation
+🚀 Installation & Setup
+1️⃣ Clone the repository
+sh
+Copiar
+Editar
+git clone https://github.com/guilherme-silva-santos/gym-ai.git
+cd gym-ai
+2️⃣ Install dependencies
+sh
+Copiar
+Editar
+npm install
+or
 
-1. Install dependencies
+sh
+Copiar
+Editar
+yarn install
+3️⃣ Set up environment variables
+Create a .env file and add your API keys:
 
-   ```bash
-   npm install
-   ```
+ini
+Copiar
+Editar
+OPENAI_API_KEY=your_openai_api_key
+SPOONACULAR_API_KEY=your_spoonacular_api_key
+4️⃣ Run the project
+For development:
 
-2. Start the app
+sh
+Copiar
+Editar
+npx expo start
+For Android:
 
-   ```bash
-    npx expo start
-   ```
+sh
+Copiar
+Editar
+npx expo run:android
+For iOS (Mac only):
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+sh
+Copiar
+Editar
+npx expo run:ios
