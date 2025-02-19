@@ -75,5 +75,6 @@ declare module '../src/theme/theme' {
   export const radius = {
     none: 0,
     sm: 12,
+    full: 9999,
   };
 }

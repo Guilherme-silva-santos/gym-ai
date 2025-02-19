@@ -1,7 +1,7 @@
 import { colors, paddings, radius } from '@/theme';
 import React, { FC } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Header } from '../../atoms/Header';
+import { Header } from '../../molecules/header';
 
 type ScreenTemplateProps = {
   children: React.ReactNode;
