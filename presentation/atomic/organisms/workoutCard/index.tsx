@@ -1,65 +1,69 @@
-import { colors, fontSizes, paddings, radius } from '@/theme';
+import { colors, margins, radius } from '@/theme';
 import { FC } from 'react';
 import {
-  Image,
+  ImageBackground,
   ImageSourcePropType,
   StyleSheet,
-  Text,
-  TouchableOpacity,
-  TouchableOpacityProps,
   View,
 } from 'react-native';
+import { Badge } from '../../atoms/badge';
+import { PlayerContolButton } from '../../atoms/playerContollButton';
 
-type WorkoutCardProps = TouchableOpacityProps & {
-  title?: string;
-  text?: string;
-  image?: ImageSourcePropType | string;
+type WorkoutCardProps = {
+  time: string;
+  kcal: string;
+  onpressButton: () => void;
+  image: ImageSourcePropType | string;
 };
 export const WorkoutCard: FC<WorkoutCardProps> = ({
-  title,
-  text,
+  kcal,
+  time,
+  onpressButton,
   image,
-  ...rest
 }: WorkoutCardProps) => {
   const imageSource = typeof image === 'string' ? { uri: image } : image;
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.container} {...rest}>
-      <View style={styles.banner}>
-        <Image source={imageSource} />
-      </View>
-      <View style={styles.information}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.text} numberOfLines={6}>
-          {text}
-        </Text>
-      </View>
-    </TouchableOpacity>
+    <View style={styles.container}>
+      <ImageBackground source={imageSource} style={styles.image}>
+        <View style={styles.infoContainer}>
+          <View style={styles.badge}>
+            <Badge icon="local-fire-department" text={kcal} />
+            <Badge icon="timer" text={time} />
+          </View>
+          <View style={styles.button}>
+            <PlayerContolButton icon="play-arrow" onPress={onpressButton} />
+          </View>
+        </View>
+      </ImageBackground>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: '50%',
-    height: 'auto',
-    padding: paddings.sm,
-    backgroundColor: colors.gray[100],
+    width: 280,
     borderRadius: radius.sm,
+    backgroundColor: colors.gray[500],
   },
-  banner: {
-    alignItems: 'center',
+  image: {
+    width: '100%',
+    height: 170,
+  },
+  badge: {
+    width: '40%',
+    height: '100%',
+    justifyContent: 'flex-end',
+    gap: 4,
+    padding: margins.sm,
+  },
+  infoContainer: {
+    flexDirection: 'row',
+  },
+  button: {
+    width: '60%',
+    height: '100%',
     justifyContent: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: colors.gray[300],
-  },
-  information: {
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: fontSizes.xlarge,
-    fontWeight: 'bold',
-  },
-  text: {
-    fontSize: fontSizes.large,
+    alignItems: 'flex-end',
+    padding: margins.sm,
   },
 });

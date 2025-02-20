@@ -13,7 +13,7 @@ type BadgeProps = {
 export const Badge: FC<BadgeProps> = ({ icon, text }) => {
   return (
     <View style={styles.container}>
-      <MaterialIcons name={icon} size={20} color={colors.gray[900]} />
+      <MaterialIcons name={icon} size={20} color={colors.gray[500]} />
       <Text style={styles.text}>{text}</Text>
     </View>
   );
@@ -26,11 +26,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 6,
     backgroundColor: colors.gray[100],
-    paddingVertical: paddings.sm,
+    paddingVertical: paddings.xs,
     borderRadius: radius.sm,
   },
   text: {
-    color: colors.gray[900],
+    color: colors.gray[500],
     fontSize: fontSizes.xlarge,
     fontWeight: 'regular',
   },
