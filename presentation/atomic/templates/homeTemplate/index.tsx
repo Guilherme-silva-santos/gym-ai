@@ -1,18 +1,15 @@
-import { Text } from 'react-native';
-import { WorkoutCard } from '../../organisms/workoutCard';
 import { ScreenTemplate } from '../screenTemplate';
 
-import logo from '@/assets/images/react-logo.png';
+import { Badge } from '../../atoms/badge';
+import { Input } from '../../atoms/input';
+import { PlayerContolButton } from '../../atoms/playerContollButton';
 
 export const HomeTemplate = () => {
   return (
     <ScreenTemplate title="Home">
-      <Text>Home</Text>
-      <WorkoutCard
-        image={logo}
-        title="Workout"
-        text="loremipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua   pariatur. Lorem ipsum dolor sit amet"
-      />
+      <Input placeholder="Search" icon="search" />
+      <Badge text="500 Kcal" icon="local-fire-department" />
+      <PlayerContolButton icon="play-arrow" />
     </ScreenTemplate>
   );
 };
