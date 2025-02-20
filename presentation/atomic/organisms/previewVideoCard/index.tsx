@@ -9,18 +9,18 @@ import {
 import { Badge } from '../../atoms/badge';
 import { PlayerContolButton } from '../../atoms/playerContollButton';
 
-type WorkoutCardProps = {
+type PreviewVideoCardProps = {
   time: string;
   kcal: string;
   onpressButton: () => void;
   image: ImageSourcePropType | string;
 };
-export const WorkoutCard: FC<WorkoutCardProps> = ({
+export const PreviewVideoCard: FC<PreviewVideoCardProps> = ({
   kcal,
   time,
   onpressButton,
   image,
-}: WorkoutCardProps) => {
+}: PreviewVideoCardProps) => {
   const imageSource = typeof image === 'string' ? { uri: image } : image;
   return (
     <View style={styles.container}>

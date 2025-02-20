@@ -24,7 +24,7 @@ export const Input: FC<InputProps> = ({ placeholder, icon, ...rest }) => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
+    width: '90%',
     gap: 8,
     paddingHorizontal: paddings.lg,
     flexDirection: 'row',
