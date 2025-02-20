@@ -18,7 +18,7 @@ export const PlayerContolButton: FC<PlayerContolButtonProps> = ({
   ...rest
 }) => {
   return (
-    <TouchableOpacity style={styles.container} {...rest}>
+    <TouchableOpacity style={styles.container} activeOpacity={0.8} {...rest}>
       <MaterialIcons name={icon} size={24} color={colors.black} />
     </TouchableOpacity>
   );
