@@ -7,6 +7,7 @@ import { Badge } from '../../atoms/badge';
 import { Input } from '../../atoms/input';
 import { PlayerContolButton } from '../../atoms/playerContollButton';
 import { ProgressBar } from '../../atoms/progressBar';
+import { ExerciseCard } from '../../organisms/exerciseCard';
 import { PreviewVideoCard } from '../../organisms/previewVideoCard';
 
 export const HomeTemplate = () => {
@@ -27,6 +28,12 @@ export const HomeTemplate = () => {
         <Button
           title="Aumentar Progresso"
           onPress={() => setProgress(prev => (prev >= 100 ? 0 : prev + 10))}
+        />
+        <ExerciseCard
+          image={Image}
+          title="Exercicio 1"
+          reps="10"
+          progress={progress}
         />
       </View>
     </ScreenTemplate>
