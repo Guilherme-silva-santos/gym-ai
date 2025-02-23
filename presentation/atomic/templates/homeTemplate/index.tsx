@@ -39,7 +39,7 @@ export const HomeTemplate = () => {
             progress={progress}
           />
           <ExploreBanner text="Veja mais" title="Exercicio 1" image={Image} />
-          <ChallengeBadge />
+          <ChallengeBadge text="Exercicio 1" />
         </View>
       </ScrollView>
     </ScreenTemplate>
