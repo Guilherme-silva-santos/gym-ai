@@ -7,6 +7,7 @@ import { Badge } from '../../atoms/badge';
 import { Input } from '../../atoms/input';
 import { PlayerContolButton } from '../../atoms/playerContollButton';
 import { ProgressBar } from '../../atoms/progressBar';
+import { ChallengeBadge } from '../../organisms/challengeBadge';
 import { ExerciseCard } from '../../organisms/exerciseCard';
 import { ExploreBanner } from '../../organisms/ExploreBanner';
 import { PreviewVideoCard } from '../../organisms/previewVideoCard';
@@ -38,6 +39,7 @@ export const HomeTemplate = () => {
             progress={progress}
           />
           <ExploreBanner text="Veja mais" title="Exercicio 1" image={Image} />
+          <ChallengeBadge text="Exercicio 1" />
         </View>
       </ScrollView>
     </ScreenTemplate>
