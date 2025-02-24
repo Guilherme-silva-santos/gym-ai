@@ -1,9 +1,9 @@
 import { ScreenTemplate } from '@/presentation/atomic/templates/screenTemplate';
 import React from 'react';
 import { StyleSheet, Text } from 'react-native';
-const Chat = () => {
+const Explore = () => {
   return (
-    <ScreenTemplate title="Home">
+    <ScreenTemplate title="Explorar">
       <Text>chat</Text>
     </ScreenTemplate>
   );
@@ -11,4 +11,4 @@ const Chat = () => {
 
 const styles = StyleSheet.create({});
 
-export default Chat;
+export default Explore;

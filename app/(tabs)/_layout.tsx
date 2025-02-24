@@ -24,6 +24,16 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="explore/index"
+        options={{
+          tabBarLabel: 'explore',
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons color={color} size={20} name="rocket-launch" />
+          ),
+        }}
+      />
+      {/* 
+      <Tabs.Screen
         name="chat/index"
         options={{
           tabBarLabel: 'Chat',
@@ -31,11 +41,11 @@ export default function TabLayout() {
             <MaterialIcons color={color} size={20} name="chat" />
           ),
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="workouts/index"
         options={{
-          tabBarLabel: 'Treinos',
+          tabBarLabel: 'Treinos AI',
           tabBarIcon: ({ color }) => (
             <MaterialIcons color={color} size={20} name="fitness-center" />
           ),
