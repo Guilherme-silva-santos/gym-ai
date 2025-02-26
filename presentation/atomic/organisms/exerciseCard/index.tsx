@@ -15,7 +15,8 @@ type ExerciseCardProps = TouchableOpacityProps & {
   title: string;
   reps: string;
   progress: number;
-  image?: ImageSourcePropType | undefined;
+  image: ImageSourcePropType | undefined;
+  isProgressBarVisible?: boolean;
 };
 
 export const ExerciseCard: FC<ExerciseCardProps> = ({
@@ -23,19 +24,22 @@ export const ExerciseCard: FC<ExerciseCardProps> = ({
   reps,
   progress,
   image,
+  isProgressBarVisible,
   ...rest
 }) => {
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.container} {...rest}>
       <View style={styles.imageContainer}>
-        <Image resizeMode="contain" source={image} />
+        <Image resizeMode="contain" source={image} width={10} height={10} />
       </View>
       <View style={styles.infoContainer}>
         <Text style={{ fontWeight: 'bold', fontSize: fontSizes.xlarge }}>
           {title}
         </Text>
-        <Text style={{ fontSize: fontSizes.large }}>{reps}</Text>
-        <ProgressBar progress={progress ?? 0} />
+        <Text style={{ fontSize: fontSizes.large, color: colors.gray[500] }}>
+          {reps}
+        </Text>
+        {isProgressBarVisible && <ProgressBar progress={progress} />}
       </View>
     </TouchableOpacity>
   );
@@ -44,23 +48,23 @@ export const ExerciseCard: FC<ExerciseCardProps> = ({
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    padding: paddings.sm,
     borderRadius: radius.sm,
     flexDirection: 'row',
     backgroundColor: colors.gray[100],
     gap: 8,
-    padding: paddings.md,
   },
   imageContainer: {
-    width: '30%',
-    height: 120,
     backgroundColor: colors.gray[200],
     borderRadius: radius.sm,
-    aspectRatio: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: paddings.sm,
+    aspectRatio: 1,
   },
   infoContainer: {
     width: '70%',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    gap: 12,
   },
 });

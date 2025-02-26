@@ -24,22 +24,16 @@ export const ProgressBar = ({ progress }: { progress: number }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.progressBarBackground}>
-        <Text style={styles.text}>{`${progress}%`}</Text>
-        <Animated.View
-          style={[styles.progressBar, animatedStyle]}
-        ></Animated.View>
-      </View>
+      <Text style={styles.text}>{`${progress}%`}</Text>
+      <Animated.View
+        style={[styles.progressBar, animatedStyle]}
+      ></Animated.View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
-    padding: paddings.md,
-  },
-  progressBarBackground: {
     width: '100%',
     height: 20,
     backgroundColor: colors.gray[200],

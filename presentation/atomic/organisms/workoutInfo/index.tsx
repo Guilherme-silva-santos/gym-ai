@@ -8,7 +8,7 @@ export const WorkoutInfo: FC = () => {
     <View style={styles.container}>
       <View style={styles.infoContainer}>
         <View style={styles.icon}>
-          <MaterialIcons name="schedule" size={24} color={colors.gray[900]} />
+          <MaterialIcons name="schedule" size={24} color={colors.gray[100]} />
         </View>
         <View style={styles.textContainer}>
           <Text style={styles.title}>Time</Text>
@@ -16,14 +16,14 @@ export const WorkoutInfo: FC = () => {
         </View>
       </View>
       <View
-        style={{ width: 1, height: '100%', backgroundColor: colors.gray[300] }}
+        style={{ width: 1, height: '100%', backgroundColor: colors.gray[500] }}
       />
       <View style={styles.infoContainer}>
         <View style={styles.icon}>
           <MaterialIcons
             name="local-fire-department"
             size={24}
-            color={colors.gray[900]}
+            color={colors.gray[100]}
           />
         </View>
         <View style={styles.textContainer}>
@@ -37,7 +37,7 @@ export const WorkoutInfo: FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    backgroundColor: colors.gray[100],
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -47,8 +47,9 @@ const styles = StyleSheet.create({
     borderColor: colors.primary,
     shadowColor: 'red',
     shadowOpacity: 1,
-    shadowRadius: 3.84,
+    shadowRadius: 1,
     elevation: 10,
+    zIndex: 10,
   },
   infoContainer: {
     flexDirection: 'row',

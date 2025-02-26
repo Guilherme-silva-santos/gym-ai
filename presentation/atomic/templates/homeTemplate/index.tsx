@@ -2,14 +2,12 @@ import { ScreenTemplate } from '../screenTemplate';
 
 import { useState } from 'react';
 import { Button, ScrollView, View } from 'react-native';
-import Image from '../../../../assets/images/react-logo.png';
+import Image from '../../../../assets/images/favicon.png';
 import { Badge } from '../../atoms/badge';
 import { Input } from '../../atoms/input';
 import { PlayerContolButton } from '../../atoms/playerContollButton';
 import { ProgressBar } from '../../atoms/progressBar';
-import { ChallengeBadge } from '../../organisms/challengeBadge';
 import { ExerciseCard } from '../../organisms/exerciseCard';
-import { ExploreBanner } from '../../organisms/ExploreBanner';
 import { PreviewVideoCard } from '../../organisms/previewVideoCard';
 
 export const HomeTemplate = () => {
@@ -35,11 +33,10 @@ export const HomeTemplate = () => {
           <ExerciseCard
             image={Image}
             title="Exercicio 1"
-            reps="10"
+            reps="4 X 10"
             progress={progress}
+            isProgressBarVisible
           />
-          <ExploreBanner text="Veja mais" title="Exercicio 1" image={Image} />
-          <ChallengeBadge text="Exercicio 1" />
         </View>
       </ScrollView>
     </ScreenTemplate>
