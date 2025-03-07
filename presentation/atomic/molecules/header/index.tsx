@@ -1,7 +1,8 @@
 import { colors, fontSizes, paddings } from '@/theme';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FC } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
+import exercise from '../../../../assets/images/react-logo.png';
 
 type HeaderProps = {
   title: string;
@@ -23,7 +24,13 @@ export const Header: FC<HeaderProps> = ({ title, canGoBack, onGoBack }) => {
       ) : (
         <View style={styles.placeholder} />
       )}
-      <Text style={styles.title}>{title}</Text>
+      <Image
+        source={exercise}
+        style={{
+          width: 76,
+          height: 30,
+        }}
+      />
       <View style={styles.placeholder} />
     </View>
   );

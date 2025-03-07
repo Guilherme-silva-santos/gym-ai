@@ -26,7 +26,7 @@ export const ScreenTemplate: FC<ScreenTemplateProps> = ({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.black,
+    backgroundColor: colors.primary,
   },
   children: {
     backgroundColor: colors.white,

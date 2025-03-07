@@ -9,22 +9,17 @@ import {
   View,
 } from 'react-native';
 import { TouchableOpacityProps } from 'react-native-gesture-handler';
-import { ProgressBar } from '../../atoms/progressBar';
 
 type ExerciseCardProps = TouchableOpacityProps & {
   title: string;
   reps: string;
-  progress: number;
-  image: ImageSourcePropType | undefined;
-  isProgressBarVisible?: boolean;
+  image: ImageSourcePropType | string;
 };
 
 export const ExerciseCard: FC<ExerciseCardProps> = ({
   title,
   reps,
-  progress,
   image,
-  isProgressBarVisible,
   ...rest
 }) => {
   return (
@@ -39,7 +34,6 @@ export const ExerciseCard: FC<ExerciseCardProps> = ({
         <Text style={{ fontSize: fontSizes.large, color: colors.gray[500] }}>
           {reps}
         </Text>
-        {isProgressBarVisible && <ProgressBar progress={progress} />}
       </View>
     </TouchableOpacity>
   );

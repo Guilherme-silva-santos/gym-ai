@@ -34,8 +34,13 @@ export default function RootLayout() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar translucent style="light" />
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <Stack>
+        <Stack
+          screenOptions={{
+            statusBarBackgroundColor: colors.primary,
+          }}
+        >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
         <StatusBar backgroundColor={colors.black} style="light" />
