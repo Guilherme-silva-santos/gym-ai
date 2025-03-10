@@ -1,10 +1,8 @@
 import axios from 'axios';
 
+const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
+const OPENAI_API_KEY = process.env.EXPO_PUBLIC_OPEN_AI;
 export const fetchOpenAi = async (message: string) => {
-  const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
-  const OPENAI_API_KEY =
-    'sk-JZI42c6pxA7gnUrQTebktcrD6cA33m3ZAVZyC6KWwgT3BlbkFJhjVYZXztDfEP4HoTLK44i5EyR6dNr_GqL0xgnSX5oA';
-
   try {
     const response = await axios.post(
       OPENAI_ENDPOINT,
@@ -13,7 +11,7 @@ export const fetchOpenAi = async (message: string) => {
         messages: [
           {
             role: 'user',
-            content: 'Um treino personalizado para mim',
+            content: message,
           },
         ],
       },

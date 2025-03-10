@@ -1,4 +1,4 @@
-import { fetchOpenAi } from '@/service/openaiService';
+import { fetchOpenAi } from '@/service/OpenAiSercive';
 import { useState } from 'react';
 import { ScrollView, Text, TextInput, View } from 'react-native';
 import { Button } from '../../atoms/Button';
@@ -25,24 +25,26 @@ export const ChatTemplate = () => {
   };
 
   return (
-    <View>
-      <ScrollView>
+    <View style={{ flex: 1, justifyContent: 'space-between', width: '100%' }}>
+      <ScrollView style={{ height: '70%', padding: 10 }}>
         {messages.map((message, index) => (
           <View key={index}>
             <Text>{message.content}</Text>
           </View>
         ))}
       </ScrollView>
-      <TextInput
-        value={userInput}
-        onChangeText={setUserInput}
-        placeholder="Digite sua mensagem"
-      />
-      <Button
-        text={loading ? 'Enviando...' : 'Enviar'}
-        onPress={handleSendaMessage}
-        isLoading={loading}
-      />
+      <View style={{ justifyContent: 'flex-end' }}>
+        <TextInput
+          value={userInput}
+          onChangeText={setUserInput}
+          placeholder="Digite sua mensagem"
+        />
+        <Button
+          text={loading ? 'Enviando...' : 'Enviar'}
+          onPress={handleSendaMessage}
+          isLoading={loading}
+        />
+      </View>
     </View>
   );
 };

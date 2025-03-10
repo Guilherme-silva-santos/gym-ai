@@ -87,7 +87,7 @@ export const Button: FC<ButtonProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: '100%',
     paddingVertical: 12,
     paddingHorizontal: 8,
     alignItems: 'center',
