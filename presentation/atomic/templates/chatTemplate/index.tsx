@@ -19,13 +19,7 @@ export const ChatTemplate = () => {
 
     const response = await fetchOpenAi(userInput);
 
-    setMessages([
-      ...messages,
-      {
-        role: 'assistant',
-        content: response + ' Seu Treino foi adcionado nos seus exercicios',
-      },
-    ]);
+    setMessages([...messages, { role: 'assistant', content: response }]);
     setUserInput('');
     setLoading(false);
   };
