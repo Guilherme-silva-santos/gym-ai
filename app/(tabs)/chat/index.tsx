@@ -1,14 +1,15 @@
+import { ChatTemplate } from '@/presentation/atomic/templates/chatTemplate';
 import { ScreenTemplate } from '@/presentation/atomic/templates/screenTemplate';
 import React from 'react';
-import { StyleSheet, Text } from 'react-native';
-const Explore = () => {
+import { StyleSheet } from 'react-native';
+const Chat = () => {
   return (
     <ScreenTemplate title="Explorar">
-      <Text>chat</Text>
+      <ChatTemplate />
     </ScreenTemplate>
   );
 };
 
 const styles = StyleSheet.create({});
 
-export default Explore;
+export default Chat;

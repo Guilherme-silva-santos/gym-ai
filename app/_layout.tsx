@@ -40,6 +40,7 @@ export default function RootLayout() {
           screenOptions={{
             statusBarBackgroundColor: colors.primary,
           }}
+          ref={null}
         >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         </Stack>
